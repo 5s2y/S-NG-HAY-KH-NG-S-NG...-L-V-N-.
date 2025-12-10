@@ -2,9 +2,15 @@
 <html>
 <body>
 
-<a href="javascript:window.open('https://5s2y.github.io/to-be-or-not-to-be/');window.open('https://5s2y.github.io/credits-to-be-or-not-to-be/');">
-    Mở 2 trang
-</a>
+<a href="#" id="openTwo">Mở 2 trang</a>
+
+<script>
+document.getElementById("openTwo").addEventListener("click", function (e) {
+    e.preventDefault();
+    window.open("https://5s2y.github.io/to-be-or-not-to-be/", "_blank");
+    window.open("https://5s2y.github.io/credits-to-be-or-not-to-be/", "_blank");
+});
+</script>
 
 </body>
 </html>
