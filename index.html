@@ -1,14 +1,53 @@
 <!DOCTYPE html>
 <html>
+<head>
+<meta charset="UTF-8">
+<title>To be or not to be, it's time to start.</title>
+
+<style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: #f2f2f2;
+        font-family: Arial, sans-serif;
+    }
+
+    #openTwo {
+        padding: 25px 60px;
+        font-size: 30px;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        background: black;
+        color: white;
+        transition: 0.2s;
+    }
+
+    #openTwo:hover {
+        transform: scale(1.05);
+        opacity: 0.9;
+    }
+</style>
+</head>
+
 <body>
 
-<a href="#" id="openTwo">Mở 2 trang</a>
+<button id="openTwo">Bấm để Mở 2 Trang</button>
 
 <script>
-document.getElementById("openTwo").addEventListener("click", function (e) {
-    e.preventDefault();
+document.getElementById("openTwo").addEventListener("click", function () {
+    // mở 2 web
     window.open("https://5s2y.github.io/to-be-or-not-to-be/", "_blank");
     window.open("https://5s2y.github.io/credits-to-be-or-not-to-be/", "_blank");
+
+    // chuyển sang about:blank → rồi tự đóng
+    setTimeout(() => {
+        window.location.href = "about:blank";
+        setTimeout(() => window.close(), 200);
+    }, 500);
 });
 </script>
 
